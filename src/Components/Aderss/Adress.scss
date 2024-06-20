@@ -1,0 +1,41 @@
+.aderss {
+    width: 100%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aderssList {
+    width: 1160px;
+    padding-left: 0;
+    list-style: none;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 1px 1px rgb(149, 147, 147);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.aderssItem {
+    width: 590px;
+    padding: 10px 40px;
+    color: black;
+}
+
+.adressTitle {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 25px;
+}
+
+.adressSubtitle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    line-height: 30px;
+}
