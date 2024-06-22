@@ -1,21 +1,24 @@
 
 .slider{
-    // margin-top: 100px;
+  
     margin-left: auto;
     margin-right: auto;
-    width: 100%;;
+    width: 100%;
+    height: 50%;
+
 
 }
 .buttonSlider{
-    width: 300px;
-    height: 200px;
+    width: 25%;
+   height: 100%;
     border: none;
     background: transparent;
     .btnImg{
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 }
 .sliderImg{
     width: 100%;
+    height: 100%;
 }

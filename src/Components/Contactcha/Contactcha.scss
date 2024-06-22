@@ -1,0 +1,41 @@
+.contact{
+    width: 100%;
+    align-items: center;
+  
+    border-radius: 10px;
+    margin:20px 5px;
+    
+  
+}
+.contactBox{
+    margin: 5px;
+    padding: 0 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgb(174, 171, 171);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.contactTitle{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+.contactSubtitle{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    width: 230px;
+}
+.contactSubtitle1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    width: 1160px;
+}
+.contactList{
+    list-style: none;
+    padding-left: 0;
+}
+.contactItem{
+    display: flex;
+    justify-content: space-between;
+}

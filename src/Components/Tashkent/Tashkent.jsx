@@ -12,7 +12,7 @@ const Tashkent = () => {
             <h3 className='adressSubtitle'> <i className='	fa fa-location-arrow'></i> Ориентир: Magic City</h3>
             <img src={magic} alt="" width={400}  height={240}/>
         </div>
-        <div style={{ position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'relative', overflow: 'hidden' ,border:'none',}}>
           <a 
             href="https://yandex.uz/maps/10335/tashkent/?utm_medium=mapframe&utm_source=maps" 
             style={{ color: '#eee', fontSize: '12px', position: 'absolute', top: '0px' }}

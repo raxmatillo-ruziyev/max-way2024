@@ -3,5 +3,71 @@
   margin: 0 auto;
   box-sizing: border-box;
   border: none;
-  overflow-x: hidden;
+  border: 1px solid red;
+  
+}
+@media(max-width: 1220px){
+  .container{
+      width: 1100px;
+  }
+}
+@media(max-width: 1120px){
+  .container{
+      width: 1000px;
+  }
+}
+@media(max-width: 1020px){
+  .container{
+      width: 900px;
+  }
+  .navbarLink{
+      text-decoration: none;
+      color: blueviolet;
+      font-family: sans-serif;
+      font-size: 17px;
+      padding: 5px 10px;
+      
+  }
+  .navbarItem{
+      width: 450px;
+  }
+}
+@media(max-width: 920px){
+  .container{
+      width: 800px;
+  }
+  .navbarLink,#logocha,.navbarBtn{
+     display: none;
+      
+  }
+  #burger{
+      display: block;
+  }
+ 
+  
+}
+@media(max-width: 820px){
+  .container{
+      width: 700px;
+  }
+}
+@media(max-width: 720px){
+  .container{
+      width: 600px;
+  }
+}
+@media(max-width: 620px){
+  .container{
+      width: 500px;
+  }
+}
+@media(max-width: 520px){
+  .container{
+      width: 400px;
+  }
+}
+@media(max-width: 420px){
+  .container{
+      width: 300px;
+  }
 }

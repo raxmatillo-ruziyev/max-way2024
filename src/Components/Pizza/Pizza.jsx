@@ -13,15 +13,15 @@ const Pizza = () => {
     <>
         <div className="container">
         <div className="lavashBox">
-        <Card name="Spicy seasoned seafood noodles" price="2.29" lavash2={pizza1}/>
-        <Card name="x owls available " price="3.29" lavash2={pizza2} />
-        <Card name="Salted Pasta with mushroom sauce" price="5.29"lavash2={pizza3}/>
-        <Card name="Beef dumpling in hot soup" price="3.29" lavash2={pizza3}/>
-        <Card name="Hot spicy fried rice with omelet" price="9.29"  lavash2={pizza5}/>
+        <Card name="Sconstant noodle special omelette" price="2.29" lavash2={pizza1}/>
+        <Card name=" Hot spicy fried x owls available " price="3.29" lavash2={pizza2} />
+        <Card name="Salted Pasta with " price="5.29"lavash2={pizza3}/>
+        <Card name="Pasta  mushroom sauce in hot soup" price="3.29" lavash2={pizza3}/>
+        <Card name="Beef dumplingrice with omelet" price="9.29"  lavash2={pizza5}/>
         <Card name="Spicy instant noodle with" price="2.29"  lavash2={pizza6}/>
-        <Card name="constant noodle special omelette" price="2.9"  lavash2={pizza7}/>
+        <Card name=" picy seasoned seafood noodles" price="2.9"  lavash2={pizza7}/>
         <Card name="noodle with spinach" price="0.29"  lavash2={pizza8}/>
-      <Card name="Salted Pasta with mushroom sauce" price="5.29" lavash2={pizza9}/>
+      <Card name="Salted with mushroom sauce" price="5.29" lavash2={pizza9}/>
         </div>
       </div>
     </>

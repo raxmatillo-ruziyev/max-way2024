@@ -1,15 +1,17 @@
 .onas{
     width: 1190px;
-    margin: 50px auto;
+    margin: 0px auto;
     padding: 25px;
-    box-shadow: 1px 1px 1px 1px rgb(162, 160, 160);
-    border-radius:10px;
+
+  
     align-items: center;
     text-align: center;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
+
+}
+.onasBox{
+    border-radius:10px;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 1px rgb(162, 160, 160);
 }
 .onasTitle{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

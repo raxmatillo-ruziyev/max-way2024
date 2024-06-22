@@ -10,11 +10,11 @@ const Xaggi = () => {
     <>
         <div className="container">
         <div className="lavashBox">
-        <Card name="Spicy seasoned seafood noodles" price="2.29" lavash2={xaggi15}/>
-        <Card name="x owls available " price="3.29" lavash2={xaggi26} />
+        <Card name="Beef dumpling in hot soup" price="2.29" lavash2={xaggi15}/>
+        <Card name=" Hot spicy fried rice with omelet " price="3.29" lavash2={xaggi26} />
         <Card name="Salted Pasta with mushroom sauce" price="5.29"lavash2={xaggi3}/>
-        <Card name="Beef dumpling in hot soup" price="3.29" lavash2={xaggi4}/>
-        <Card name="Hot spicy fried rice with omelet" price="9.29"  lavash2={xaggi15}/>
+        <Card name=" Spicy seasoned seafood noodles" price="3.29" lavash2={xaggi4}/>
+        <Card name="x owls available" price="9.29"  lavash2={xaggi15}/>
         <Card name="Spicy instant noodle with" price="2.29"  lavash2={xaggi26}/>
         </div>
       </div>

@@ -11,12 +11,12 @@ const Desert = () => {
     <>
       <div className="container">
         <div className="lavashBox">
-        <Card name="Spicy seasoned seafood noodles" price="2.29" lavash2={desert1}/>
-        <Card name="x owls available " price="3.29" lavash2={desert2} />
-        <Card name="Salted Pasta with mushroom sauce" price="5.29"lavash2={desert3}/>
+        <Card name=" x owls available" price="2.29" lavash2={desert1}/>
+        <Card name="Hot spicy fried rice with omelet" price="3.29" lavash2={desert2} />
+        <Card name="Spicy instant noodle with" price="5.29"lavash2={desert3}/>
         <Card name="Beef dumpling in hot soup" price="3.29" lavash2={desert4}/>
-        <Card name="Hot spicy fried rice with omelet" price="9.29"  lavash2={desert5}/>
-        <Card name="Spicy instant noodle with" price="2.29"  lavash2={desert2}/>
+        <Card name=" Spicy seasoned seafood noodles" price="9.29"  lavash2={desert5}/>
+        <Card name="Salted Pasta with mushroom sauce" price="2.29"  lavash2={desert2}/>
         </div>
       </div>
     

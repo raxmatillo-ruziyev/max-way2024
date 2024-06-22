@@ -14,15 +14,15 @@ const Set = () => {
     <>
        <div className="container">
         <div className="lavashBox">
-        <Card name="Spicy seasoned seafood noodles" price="2.29" lavash2={set1}/>
+        <Card name=" noodle with spinach" price="2.29" lavash2={set1}/>
         <Card name="x owls available " price="3.29" lavash2={set2} />
-        <Card name="Salted Pasta with mushroom sauce" price="5.29"lavash2={set3}/>
+        <Card name="Spicy seasoned seafood noodles" price="5.29"lavash2={set3}/>
         <Card name="Beef dumpling in hot soup" price="3.29" lavash2={set46}/>
-        <Card name="Hot spicy fried rice with omelet" price="9.29"  lavash2={set5}/>
+        <Card name=" Salted Pasta with mushroom sauce" price="9.29"  lavash2={set5}/>
         <Card name="Spicy instant noodle with" price="2.29"  lavash2={set46}/>
         <Card name="constant noodle special omelette" price="2.9"  lavash2={set7}/>
-        <Card name="noodle with spinach" price="0.29"  lavash2={set8}/>
-      <Card name="Salted Pasta with mushroom sauce" price="5.29" lavash2={set9}/>
+        <Card name="Salted Pasta with mushroom sauce " price="0.29"  lavash2={set8}/>
+      <Card name="Hot spicy fried rice with omelet" price="5.29" lavash2={set9}/>
         </div>
       </div>
     </>
