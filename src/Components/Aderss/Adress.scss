@@ -1,17 +1,20 @@
 .aderss {
     width: 100%;
-    padding: 10px;
+    padding: 8px 0;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden; /* Agar chiqib ketishni oldini olmoqchi bo'lsangiz */
 }
 
+
 .aderssList {
-    width: 1160px;
+    max-width: 90%; /* Avvalgi miqdorni o'zgartirib, 1160px qilamiz */
+    margin: 0 auto; /* Elementni ekran o'rtasiga joylash */
     padding-left: 0;
     list-style: none;
-    padding: 5px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Flex elementlarni qatorlar bo'yicha qoplamiz */
     box-shadow: 1px 1px 1px 1px rgb(149, 147, 147);
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -20,10 +23,17 @@
     -o-border-radius: 5px;
 }
 
-.aderssItem {
-    width: 590px;
-    padding: 10px 40px;
+
+.aderssItem,.aderssItem2 {
+    width: 50%;
+    /* O'lchamni 50% ga qo'shamiz va marginlar bilan hisoblash */
+    padding: 10px 20px;
+    /* Paddingni ozgartiramiz */
     color: black;
+    box-sizing: border-box;
+    /* Paddingni, border ni hisobga olish */
+    margin-bottom: 20px;
+    /* Yuqori va pastdagi bosishni belgilaymiz */
 }
 
 .adressTitle {
@@ -39,3 +49,152 @@
     font-weight: 500;
     line-height: 30px;
 }
+@media(max-width: 1220px){
+    .container{
+        width: 1100px;
+    }
+  }
+  @media(max-width: 1120px){
+    .container{
+        width: 1000px;
+    }
+  }
+  @media(max-width: 1020px){
+    .container{
+        width: 900px;
+    }
+
+  }
+  @media(max-width: 920px){
+    .container{
+        width: 800px;
+    }
+    .adressTitle{
+        font-size: 30px;
+    }
+ .adressSubtitle {
+    font-size: 18px;
+    line-height: 30px;
+}
+.aderssList {
+    display: flex;
+    justify-content: space-between;
+}
+
+   
+    
+  }
+  @media(max-width: 820px){
+    .container{
+        width: 700px;
+    }
+    .adressTitle{
+        font-size: 27px;
+    }
+ .adressSubtitle {
+    font-size: 17px;
+    line-height: 28px;
+}
+
+  
+  }
+  @media(max-width: 720px){
+    .container{
+        width: 600px;
+    }
+    .aderssList {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .aderssItem{
+        margin: 0;
+        padding: 0 20px;    
+    }
+    .aderssItem2{
+        // padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .adressTitle{
+        font-size: 27px;
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+ .adressSubtitle {
+    font-size: 17px;
+    line-height: 28px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+  }
+  @media(max-width: 620px){
+    .container{
+        width: 500px;
+    }
+    .adressTitle{
+        font-size: 23px;
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+ .adressSubtitle {
+    font-size: 15px;
+    line-height: 28px;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+  }
+  @media(max-width: 520px){
+    .container{
+        width: 400px;
+    }
+    .aderssItem2{
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .adressTitle{
+        font-size: 25px;
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+ .adressSubtitle {
+    font-size: 14px;
+    line-height: 28px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+  }
+  @media(max-width: 420px){
+    .container{
+        width: 300px;
+    }
+    .aderssItem2{
+        width: 200px;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .adressTitle{
+        font-size: 22px;
+        width: 250px;
+        margin: 0 auto;
+        text-align: center;
+    }
+ .adressSubtitle {
+    font-size: 12px;
+    line-height: 20px;
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+  }

@@ -1,10 +1,11 @@
 import React from 'react'
+import './Tashkent.scss'
 import magic  from '../../assets/macgic.jpeg'
 const Tashkent = () => {
   return (
-    <div>
-         <div  style={{display:'flex',justifyContent:"space-between",padding:"30px", width:"1200px", margin:"0 auto"}}>
-        <div className='magicBox'>
+    <div className='container'>
+         <div  style={{display:'flex',justifyContent:"space-around",padding:"10px", width:"100%", margin:"0 auto"}}>
+        <div className='magicBox' style={{width:'500px'}}>
             <h1 className="adressTitle"> MaxWay Magic City</h1>
             <h3 className='adressSubtitle'> <i className='	fa fa-map-marker'></i>  Адрес: Magic City,ул. Бабура, 174, Ташкент, Узбекистан</h3>
             <h3 className='adressSubtitle'><i className='fa fa-clock-o'></i> Часы работы: 10:00-03:00</h3>
@@ -27,7 +28,7 @@ const Tashkent = () => {
           </a>
           <iframe 
             src="https://yandex.uz/map-widget/v1/?ll=69.279737%2C41.311151&z=12" 
-            width="660" 
+            width="600" 
             height="500" 
             frameBorder="1" 
             allowFullScreen 

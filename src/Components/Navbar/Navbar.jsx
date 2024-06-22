@@ -4,9 +4,9 @@ import './Navbar.scss'
 const Navbar = () => {
   return (
     <>
-      <div className="navbar">
-        <div className="container">
-        <div className="navbarcha">
+   <div className="navbar">
+      <div className="container">
+      <div className="navbarcha">
           <ul className="navbarList">
             <li className="navbarItem1"><Link to={'/'} style={{ textDecoration: 'none' }} className="logo">SFood</Link></li>
             <li className="navbarItem">

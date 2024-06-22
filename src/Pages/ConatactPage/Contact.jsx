@@ -6,7 +6,7 @@ import Contactcha from '../../Components/Contactcha/Contactcha'
 
 const Contact = () => {
   return (
-   <div>
+   <div className='container'>
           <Navbar />
           <Contactcha name={'Телефоны контактных центров'} text={'Ташкент'} text2={'Наманган'} title={'Круглосуточно, без выходных'} text3={'Алмалык'} number={'+998931487733 '} number2={'+998993253304'} number3={'+998931487777'}/>
           <Contactcha name={'Отдел поддержки клиентов'}text={'Электронная почта'} text2={'Контактный телефон'} number={'raxmatillo248@gmail.com'}number2={'+998935010770'} />

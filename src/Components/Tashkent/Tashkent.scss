@@ -1,0 +1,12 @@
+.magicBox {
+    @media (max-width: 768px) {
+        width: 100%; /* Kichik ekranlar uchun to'liq ekran qatnashchisini ishlatish */
+    }
+}
+
+iframe {
+    @media (max-width: 768px) {
+        width: 100%; /* Kichik ekranlar uchun iframe ni to'liq ekran qatnashchisiga moslash */
+        height: 300px; /* Iframe ning balandligini o'zgartirish */
+    }
+}
