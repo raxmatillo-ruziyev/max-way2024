@@ -1,124 +1,134 @@
 .slider {
-    margin-left: auto;
-    margin-right: auto;
+    --chili: #f0432b;
+    --ink: #17141f;
     width: 100%;
-    height: auto;
-    /* Adjust height for responsiveness */
-    position: relative;
-
-    .slider-container {
-        position: relative;
+    padding: 8px 0 24px;
+  
+    &__stage {
+      position: relative;
     }
-
-    .sliderImg {
-        width: 100%;
-        height: 390px;
-        /* Maintain aspect ratio */
+  
+    &__viewport {
+      overflow: hidden;
+      border-radius: 24px;
+      background: #f6f4f1;
+      touch-action: pan-y;
     }
-
-    .nav-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: transparent;
-        color: rgb(31, 17, 161);
-        border: none;
-        cursor: pointer;
-        z-index: 1;
-        font-size: 40px;
-
-        &.prev {
-            left: 10px;
+  
+    &__track {
+      display: flex;
+      transition: transform 0.55s cubic-bezier(0.22, 0.8, 0.28, 1);
+      will-change: transform;
+    }
+  
+    &__slide {
+      flex: 0 0 100%;
+      min-width: 0;
+    }
+  
+    &__img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      object-fit: cover; // keeps the picture from stretching
+      user-select: none;
+    }
+  
+    &__arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.92);
+      border: 0;
+      border-radius: 50%;
+      box-shadow: 0 6px 18px rgba(23, 20, 31, 0.18);
+      cursor: pointer;
+      transform: translateY(-50%);
+      transition: color 0.2s ease, background-color 0.2s ease;
+  
+      &--prev {
+        left: 16px;
+      }
+  
+      &--next {
+        right: 16px;
+      }
+  
+      &:hover {
+        color: #fff;
+        background: var(--chili);
+      }
+  
+      &:focus-visible {
+        outline: 3px solid var(--chili);
+        outline-offset: 2px;
+      }
+    }
+  
+    &__dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 16px;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+  
+    &__dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.65);
+      border: 0;
+      border-radius: 999px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      transition: width 0.25s ease, background-color 0.25s ease;
+  
+      &.is-active {
+        width: 24px;
+        background: #fff;
+      }
+    }
+  }
+  
+  // Tablet and mobile: taller image, smaller arrows
+  @media (max-width: 800px) {
+    .slider {
+      &__img {
+        aspect-ratio: 4 / 3;
+      }
+  
+      &__viewport {
+        border-radius: 18px;
+      }
+  
+      &__arrow {
+        width: 38px;
+        height: 38px;
+  
+        &--prev {
+          left: 10px;
         }
-
-        &.next {
-            right: 10px;
+  
+        &--next {
+          right: 10px;
         }
-
-        @media (max-width: 600px) {
-            // display: none;
-            /* Hide buttons on smaller screens */
-        }
+      }
     }
-}
-
-.buttonSlider {
-    width: 25%;
-    height: auto;
-    /* Adjust height for responsiveness */
-    border: none;
-    background: transparent;
-
-    .btnImg {
-        width: 100%;
-        height: auto;
-        /* Maintain aspect ratio */
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .slider__track,
+    .slider__dot,
+    .slider__arrow {
+      transition: none;
     }
-
-    @media (max-width: 800px) {
-        display: none;
-        /* Hide buttons on smaller screens */
-    }
-}
-
-/* Additional media queries for better responsiveness */
-@media (max-width: 1020px) {
-    .buttonSlider {
-        width: 30%;
-    }
-
-    .nav-button {
-        font-size: 35px;
-    }
-}
-
-@media (max-width: 820px) {
-    .buttonSlider {
-        width: 40%;
-    }
-
-    .nav-button {
-        font-size: 32px;
-    }
-}
-
-@media (max-width: 720px) {
-    .buttonSlider {
-        width: 50%;
-    }
-
-    .nav-button {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 620px) {
-    .buttonSlider {
-        width: 60%;
-    }
-
-    .nav-button {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 520px) {
-    .buttonSlider {
-        width: 70%;
-    }
-
-    .nav-button {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 420px) {
-    .buttonSlider {
-        width: 80%;
-        height: 270px;
-    }
-
-    .nav-button {
-        font-size: 22px;
-    }
-}
+  }
