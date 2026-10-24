@@ -1,0 +1,147 @@
+.contact-page {
+    padding-top: 8px;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: #17141f;
+  
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+  
+      // the first card (call center) spans the full width
+      > :first-child {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+  
+  .contact-hero {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 56px 48px;
+    color: #fff;
+    background: #d6341d;
+    border-radius: 28px;
+  
+    // two overlapping circles echo the "bite" in the logo
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: #f0432b;
+      pointer-events: none;
+    }
+  
+    &::before {
+      width: 360px;
+      height: 360px;
+      right: -90px;
+      bottom: -170px;
+    }
+  
+    &::after {
+      width: 150px;
+      height: 150px;
+      right: 210px;
+      bottom: -70px;
+      background: #e23a22;
+    }
+  
+    &__text {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+    }
+  
+    &__title {
+      margin: 0 0 12px;
+      font-family: 'Bricolage Grotesque', 'DM Sans', system-ui, sans-serif;
+      font-size: clamp(34px, 6vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+    }
+  
+    &__lead {
+      margin: 0 0 28px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  
+    &__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  
+    &__btn {
+      padding: 13px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  
+      &:hover {
+        transform: translateY(-1px);
+      }
+  
+      &:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 3px;
+      }
+  
+      &--primary {
+        color: #17141f;
+        background: #fff;
+  
+        &:hover {
+          background: #fff0ed;
+        }
+      }
+  
+      &--ghost {
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+  
+        &:hover {
+          background: rgba(255, 255, 255, 0.12);
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .contact-page__list {
+      grid-template-columns: 1fr;
+  
+      > :first-child {
+        grid-column: auto;
+      }
+    }
+  
+    .contact-hero {
+      padding: 36px 24px 40px;
+      border-radius: 22px;
+  
+      &::before {
+        width: 240px;
+        height: 240px;
+        right: -80px;
+        bottom: -120px;
+      }
+  
+      &::after {
+        right: 110px;
+        bottom: -80px;
+      }
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .contact-hero__btn {
+      transition: none;
+    }
+  }
