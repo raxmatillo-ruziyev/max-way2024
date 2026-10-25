@@ -9,6 +9,8 @@ import Xaggi from './Components/Xaggi/Xaggi'
 import Burger from './Components/Burger/Burger'
 import Pizza from './Components/Pizza/Pizza'
 import Magic from './Components/MagicCity/Magic'
+import TashkentCity from './Components/TashkentCity/TashkentCity'
+import Chilanzar from './Components/Chilanzar/Chilanzar'
 import Contact from './Pages/ConatactPage/Contact'
 import Onas from './Pages/Onas/Onas'
 
@@ -30,6 +32,8 @@ function App() {
         </Route>
         <Route path='/about' element={<AboutPage />} />
         <Route path='/magic' element={<Magic />} />
+        <Route path='/tashkent-city' element={<TashkentCity />} />
+        <Route path='/chilanzar' element={<Chilanzar />} />
         <Route path='/onas' element={<Onas/>} />
         <Route path='/contact' element={<Contact/>} />
       </Routes>
