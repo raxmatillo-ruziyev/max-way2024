@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import Tashkent from '../Tashkent/Tashkent'
-import tashkentCityPhoto from '../../assets/tashkent.jpeg'
+import tashkentCityPhoto from '../../assets/tashkent.png'
 
 const TashkentCity = () => {
   return (

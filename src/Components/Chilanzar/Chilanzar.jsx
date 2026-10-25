@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import Tashkent from '../Tashkent/Tashkent'
-import chilanzarPhoto from '../../assets/chilonzor.jpeg'
+import chilanzarPhoto from '../../assets/chilonzor.png'
 
 const Chilanzar = () => {
   return (

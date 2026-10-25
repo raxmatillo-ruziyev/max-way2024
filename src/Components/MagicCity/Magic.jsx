@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import Tashkent from '../Tashkent/Tashkent'
-import magicPhoto from '../../assets/macgic.jpeg'
+import magicPhoto from '../../assets/magic.png'
 
 const Magic = () => {
   return (

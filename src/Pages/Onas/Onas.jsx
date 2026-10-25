@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Onas.scss'
-import onas from '../../assets/onas-hero.svg'
+import onas from '../../assets/maxbite.jpeg'
 import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 
