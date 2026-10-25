@@ -34,15 +34,6 @@ import combo7 from '../../assets/combo7.jpeg'
 import combo8 from '../../assets/combo8.jpeg'
 
 
-import set1 from '../../assets/set1.jpg'
-import set2 from '../../assets/set2.jpg'
-import set3 from '../../assets/set3.jpg'
-import set46 from '../../assets/set46.jpg'
-import set5 from '../../assets/set5.png'
-import set7 from '../../assets/set7.jpg'
-import set8 from '../../assets/set8.jpg'
-import set9 from '../../assets/set9.jpg'
-
 import desert1 from '../../assets/desert1.jpeg'
 import desert2 from '../../assets/desert2.jpg'
 import desert3 from '../../assets/desert3.jpeg'
