@@ -1,49 +1,183 @@
-.card{
-   margin: 10px;
-   padding: 5px;
-   width: 269px;
-   height: 400px;
-   box-shadow: 2px 2px 2px 2px rgba(110, 109, 109, 0.715);
-   border-radius:5px ;
-   align-items: center;
-   text-align: center;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   -webkit-border-radius:5px ;
-   -moz-border-radius:5px ;
-   -ms-border-radius:5px ;
-   -o-border-radius:5px ;
-   &:hover
-{
-    transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    -moz-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    -o-transform: scale(0.95);
-    transition: 0.1s;
-    -webkit-transition: 0.1s;
-    -moz-transition: 0.1s;
-    -ms-transition: 0.1s;
-    -o-transition: 0.1s;
-}}
-.cardTitle{
-    font-weight: 600;
-    text-align: left;
-    padding-left: 10px;
-    font-size: 25px;
-}
-.cardText{
-    text-align: left;
-    padding-left: 10px;
-    font-size: 19px;
-}
-.cardList{
+// Put cards inside this wrapper so they fill the width evenly:
+// <div className="card-grid"> {items.map(...)} </div>
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 8px 0 48px;
+  }
+  
+  .card {
+    --chili: #f0432b;
+    --ink: #17141f;
+    --muted: #6b6677;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    padding-left: 0;
-}
-.cardSubtitle{
-    font-weight: 400;
-    font-size: 22px;
-}
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px; // the photo sits INSIDE the card, with a frame around it
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid #ece9e4;
+    border-radius: 24px;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  
+    &:hover {
+      border-color: transparent;
+      box-shadow: 0 14px 34px rgba(23, 20, 31, 0.12);
+    }
+  
+    &__media {
+      overflow: hidden;
+      background: #f6f4f1;
+      border-radius: 16px;
+    }
+  
+    &__img {
+      display: block;
+      width: 100%;
+      height: 250px;
+      aspect-ratio: 7 / 4; // shorter photo: more room for the text below
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.02); // makes mixed photos look more alike
+      transition: transform 0.4s ease;
+    }
+  
+    &:hover &__img {
+      transform: scale(1.05);
+    }
+  
+    &__body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 16px 10px 10px;
+    }
+  
+    &__title {
+      margin: 0 0 8px;
+      font-family: 'Bricolage Grotesque', 'DM Sans', system-ui, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+  
+    &__text {
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--muted);
+      // room for 3 lines, and every card keeps the same height
+      min-height: 4.35em;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid #f0ede8;
+    }
+  
+    &__price {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+  
+      span {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--muted);
+      }
+    }
+  
+    &__add {
+      display: grid;
+      flex-shrink: 0;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      color: #fff;
+      background: var(--chili);
+      border: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+  
+      &:hover {
+        background: #d6341d;
+        transform: rotate(90deg);
+      }
+  
+      &:active {
+        transform: scale(0.92);
+      }
+  
+      &:focus-visible {
+        outline: 3px solid var(--ink);
+        outline-offset: 2px;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  
+    .card {
+      padding: 8px;
+      border-radius: 20px;
+  
+      &__media {
+        border-radius: 12px;
+      }
+  
+      &__img {
+        aspect-ratio: 3 / 2;
+      }
+  
+      &__body {
+        padding: 12px 4px 4px;
+      }
+  
+      &__title {
+        font-size: 16px;
+      }
+  
+      &__text {
+        font-size: 13px;
+      }
+  
+      &__price {
+        font-size: 16px;
+      }
+  
+      &__add {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .card,
+    .card__img,
+    .card__add {
+      transition: none;
+    }
+  
+    .card:hover .card__img {
+      transform: none;
+    }
+  }

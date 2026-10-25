@@ -1,32 +1,36 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Menu.scss'
-import { Link, Outlet } from 'react-router-dom'
-const Menu = () => {
-  return (
-    <>
-      <div className="menu">
-        <div className="container">
-            <ul className="menuList">
-                <li className="menuItem" ><Link to={"/"} className='menuLink' >Lavash</Link></li>
-                <li className="menuItem" ><Link to={"/desert"} className='menuLink' >Desert</Link></li>
-                <li className="menuItem" ><Link to={"/set"} className='menuLink' >Set</Link></li>
-                <li className="menuItem" ><Link to={"/xaggi"} className='menuLink' >Xaggi</Link></li>
-                <li className="menuItem" ><Link to={"/burger"} className='menuLink' >Burger</Link></li>
-                <li className="menuItem" ><Link to={"/pizza"} className='menuLink' >Pizza</Link></li>
-                <li className="menuItem" ><Link to={"/set"} className='menuLink' >Sendvich</Link></li>
-                <li className="menuItem" ><Link to={"/"} className='menuLink' >Donar</Link></li>
-                <li className="menuItem" ><Link to={"/burger"} className='menuLink' >Xot-Dog</Link></li>
-                <li className="menuItem" ><Link to={"/pizza"} className='menuLink' >Free</Link></li>
-                <li className="menuItem" ><Link to={"/"} className='menuLink' >Drink</Link></li>
-                <li className="menuItem" ><Link to={"/xaggi"} className='menuLink' >Salad</Link></li>
-                <li className="menuItem" ><Link to={"/burger"} className='menuLink' >Bread</Link></li>
-                <li className="menuItem" ><Link to={"/pizza"} className='menuLink' >Sauce</Link></li>
-            </ul>
-        </div>
-    
-      </div>
 
-    </>
+// Category tabs. It only displays what it is given:
+//   categories: [{ slug, label }]   active: slug   onChange(slug)
+const Menu = ({ categories, active, onChange }) => {
+  const listRef = useRef(null)
+
+  // On small screens the row scrolls sideways: keep the active tab in view
+  useEffect(() => {
+    const el = listRef.current?.querySelector('.is-active')
+    el?.scrollIntoView({ inline: 'center', block: 'nearest' })
+  }, [active])
+
+  return (
+    <nav className="menu" aria-label="Menu categories">
+      <div className="container">
+        <ul className="menu__list" ref={listRef}>
+          {categories.map(({ slug, label }) => (
+            <li key={slug}>
+              <button
+                type="button"
+                className={`menu__link ${slug === active ? 'is-active' : ''}`}
+                aria-pressed={slug === active}
+                onClick={() => onChange(slug)}
+              >
+                {label}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
   )
 }
 

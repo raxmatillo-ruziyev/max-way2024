@@ -13,7 +13,7 @@ const Onas = () => {
         <div className="container">
           <div className="onasBox">
             <div className='boxcha'>
-              <img className='onasImg' src={onas} alt="A MaxBite burger with fries and a drink" />
+              <img className='onasImg' src={onas} alt="A MaxBite restaurant in Tashkent at dusk" />
             </div>
 
             <ul className="onasStats">

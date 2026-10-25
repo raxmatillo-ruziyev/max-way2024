@@ -1,0 +1,19 @@
+.products {
+    padding-top: 8px;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: #17141f;
+  
+    &__title {
+      margin: 0 0 20px;
+      font-family: 'Bricolage Grotesque', 'DM Sans', system-ui, sans-serif;
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+  
+    &__empty {
+      margin: 0;
+      padding: 40px 0 64px;
+      color: #6b6677;
+    }
+  }
