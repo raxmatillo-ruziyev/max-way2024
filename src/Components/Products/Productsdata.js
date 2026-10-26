@@ -40,9 +40,19 @@ import desert3 from '../../assets/desert3.jpeg'
 import desert4 from '../../assets/desert4.jpg'
 import desert5 from '../../assets/desert5.jpg'
 
-// Drawn placeholders for categories that have no photos yet
-import sidesImg from '../../assets/sides.svg'
-import drinksImg from '../../assets/drinks.svg'
+import sides1 from '../../assets/sides1.jpg'
+import sides2 from '../../assets/sides2.webp'
+import sides3 from '../../assets/sides3.jpeg'
+import sides4 from '../../assets/sides4.jpeg'
+import sides5 from '../../assets/sides5.jpeg'
+import sides6 from '../../assets/sides6.jpeg'
+
+import drinks1 from '../../assets/drinks1.jpeg'
+import drinks2 from '../../assets/drinks2.jpeg'
+import drinks3 from '../../assets/drinks3.jpeg'
+import drinks4 from '../../assets/drinks4.jpeg'
+import drinks5 from '../../assets/drinks5.webp'
+import drinks6 from '../../assets/drinks6.jpeg'
 
 // The menu tabs. The first one is shown by default.
 export const CATEGORIES = [
@@ -130,7 +140,7 @@ export const PRODUCTS = {
     ['Mega Set', 120000, 'Two burgers, a lavash, fries and drinks.'],
   ]),
 
-  sides: make('sides', [sidesImg], [
+  sides: make('sides', [sides1,sides2,sides3,sides4,sides5,sides6], [
     ['French Fries S', 12000, 'Golden and crispy, small portion.'],
     ['French Fries M', 16000, 'Golden and crispy, medium portion.'],
     ['French Fries L', 20000, 'Golden and crispy, large portion.'],
@@ -145,7 +155,7 @@ export const PRODUCTS = {
     ['BBQ Sauce', 4000, 'Sweet and smoky barbecue dip.'],
   ]),
 
-  drinks: make('drinks', [drinksImg], [
+  drinks: make('drinks', [drinks1,drinks2,drinks3,drinks4,drinks5,drinks6], [
     ['Cola 0.5 L', 9000, 'Ice-cold sparkling cola.'],
     ['Orange Soda 0.5 L', 9000, 'Sparkling orange soda.'],
     ['Lemon Iced Tea', 12000, 'Cold black tea with lemon.'],
